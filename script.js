@@ -55,6 +55,8 @@ function answer(selection) {
         AUDIO_FAIL.play();
     }
     document.getElementById('next-button').disabled = false;
+    document.getElementById('transparent-div').style.display = 'block';
+
 }
 
 
@@ -121,4 +123,5 @@ function showNextQuestion() {
     document.getElementById('answer_2').innerHTML = question['answer_2'];
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
+    document.getElementById('transparent-div').style.display = 'none';
 }
