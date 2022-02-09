@@ -3,12 +3,26 @@ let currentQuestion = 0;
 let AUDIO_SUCCESS = new Audio('./sounds/right.mp3');
 let AUDIO_FAIL = new Audio('./sounds/wrong.mp3');
 let FINAL_SOUND = new Audio('./sounds/tada.mp3');
-// let BACKGROUND_SOUND = new Audio('./sounds/background.mp3');
+let BACKGROUND_SOUND = new Audio('./sounds/background.mp3');
+
+
+function startGame(){
+    document.getElementById('start-game').style.display = 'none';
+    render();
+}
 
 
 function render() {
     document.getElementById('all-questions').innerHTML = questions.length;
     showQuestion();
+    playMusic();  
+}
+
+
+function playMusic(){
+    BACKGROUND_SOUND.play();
+    BACKGROUND_SOUND.volume = 0.02
+    BACKGROUND_SOUND.loop = true;
 }
 
 
@@ -49,14 +63,15 @@ function answer(selection) {
         document.getElementById(selection).parentNode.classList.add('bg-success');
         rightAnwsers.push(1);
         AUDIO_SUCCESS.play();
+        AUDIO_SUCCESS.volume = 0.1
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger');
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
         AUDIO_FAIL.play();
+        AUDIO_FAIL.volume = 0.1
     }
     document.getElementById('next-button').disabled = false;
     document.getElementById('transparent-div').style.display = 'block';
-
 }
 
 
@@ -104,6 +119,7 @@ function showEndScreen() {
     document.getElementById('progress-bar').innerHTML = `100 %`;
     document.getElementById('progress-bar').style = `width: 100%`;
     FINAL_SOUND.play();
+    FINAL_SOUND.volume = 0.3
 }
 
 

@@ -8,9 +8,27 @@
 
 .navbar{
     position: absolute !important;
+    cursor: pointer;
     left: 0%;
     right: 0%;
 
+}
+
+.start-game{
+    background-image: url("img/theater.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 2;
+    color: rgb(255, 240, 240);
+    text-align: center;
+    padding-top: 5%;
 }
 
 .card{
@@ -37,13 +55,8 @@
 
 .quiz-answer-card:hover{
     cursor: pointer;
-    background-color: rgb(73, 0, 0) !important;
+    background-color: rgb(73, 0, 0);
 }
-
-/* .quiz-answer-card-tansp:hover{
-    cursor: pointer;
-    background-color: transparent !important;
-} */
 
 .btn{
     background-color: rgb(73, 0, 0) !important;
@@ -75,17 +88,22 @@
     right: 0% !important;
     left: 0% !important;
     bottom: 20% !important;
-    background-color: transparent;
+    background-color: aqua;
 }
 
 .card-body{
     position: relative !important;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 550px) {
     .card{
         width: 100% !important;
         height: 100%;
+    }
+
+    .quiz-answer-card:hover{
+        cursor: pointer;
+        background-color: rgb(73, 0, 0);
     }
 
     .container{
@@ -100,6 +118,29 @@
 
     .navbar{
         display: none !important;
+    }
+
+    .transparent-div{
+        top: 0% !important;
+        bottom: 65% !important;
+    }
+}
+
+@media (max-width: 350px){
+    .transparent-div{
+        bottom: 65% !important;
+    }
+}
+
+@media (max-width: 230px){
+    .transparent-div{
+        bottom: 60% !important;
+    }
+}
+
+@media (max-width: 200px){
+    .transparent-div{
+        bottom: 55% !important;
     }
 }
 

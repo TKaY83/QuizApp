@@ -18,13 +18,9 @@
     <title>QuizApp</title>
 </head>
 
-<body onload="render();">
-    <div>
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">QuizApp</span>
-            </div>
-        </nav>
+<body>
+
+    <div onclick="startGame()" class="start-game" id="start-game"><h1>Klick to Start Quiz</h1></div>
 
         <div class="container">
 
@@ -53,30 +49,30 @@
 
                     <h5 class="card-title" id="question-text">Frage (Variable)</h5>
                     <div class="transparent-div" id="transparent-div" style="display: none"></div>
-                        <div class="quiz-answer-card quiz-answer-card:hover" onclick="answer('answer_1')">
-                            <div class="card-body" id="answer_1">
-                                Antwort
-                            </div>
+                    <div class="quiz-answer-card" onclick="answer('answer_1')">
+                        <div class="card-body" id="answer_1">
+                            Antwort
                         </div>
+                    </div>
 
-                        <div class="quiz-answer-card quiz-answer-card:hover" onclick="answer('answer_2')">
-                            <div class="card-body" id="answer_2">
-                                Antwort
-                            </div>
+                    <div class="quiz-answer-card" onclick="answer('answer_2')">
+                        <div class="card-body" id="answer_2">
+                            Antwort
                         </div>
+                    </div>
 
-                        <div class="quiz-answer-card quiz-answer-card:hover" onclick="answer('answer_3')">
-                            <div class="card-body" id="answer_3">
-                                Antwort
-                            </div>
+                    <div class="quiz-answer-card" onclick="answer('answer_3')">
+                        <div class="card-body" id="answer_3">
+                            Antwort
                         </div>
+                    </div>
 
-                        <div class="quiz-answer-card quiz-answer-card:hover" onclick="answer('answer_4')">
-                            <div class="card-body" id="answer_4">
-                                Antwort
-                            </div>
+                    <div class="quiz-answer-card" onclick="answer('answer_4')">
+                        <div class="card-body" id="answer_4">
+                            Antwort
                         </div>
-                    
+                    </div>
+
                     <div class="card-body">
 
                         <p class="card-text"><b id="current-question-number">1</b> von <b id="all-questions">5</b>
@@ -88,7 +84,8 @@
                 </div>
             </div>
         </div>
-    </div>
+
+    
 
 </body>
 
