@@ -21,7 +21,7 @@ function render() {
 
 function playMusic(){
     BACKGROUND_SOUND.play();
-    BACKGROUND_SOUND.volume = 0.02
+    BACKGROUND_SOUND.volume = 0.05
     BACKGROUND_SOUND.loop = true;
 }
 
